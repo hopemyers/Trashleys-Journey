@@ -33,7 +33,7 @@ function scrollright(scrollDuration) {
 
 function bagtomouse() {
   document.body.style.overflowY = "visible";
-  document.body.style.overflowX = "visible";
+  document.body.style.overflowX = "hidden";
   document.getElementById('floatingbagopacity').style.opacity = 0;
   // console.log(url(/images/cursorbag.png));
   document.body.style.cursor= "url(images/cursorbag.png), auto";
@@ -58,8 +58,8 @@ function myFunction() {
   document.getElementById('depthmeter').innerHTML = "Depth: " + (document.documentElement.scrollTop - windowHeight/2 -10) + "m";
   document.getElementById('scrolldown').style.opacity = 0;
 
-  if (document.documentElement.scrollLeft > windowWidth){
-    document.body.style.overflowX = "visible";
+  if (document.documentElement.scrollLeft > 1435){
+    document.body.style.overflowX = "hidden";
   }
 
   if(document.documentElement.scrollTop > windowHeight/.31359649 && eggsfound < 6 && remindrun === 0){
@@ -74,14 +74,14 @@ function myFunction() {
   }
 
   if(document.documentElement.scrollTop > windowHeight/.39722222 && whalerun === 0) {
-    document.body.style.overflowY = "visible";
+    document.body.style.overflowY = "hidden";
     setTimeout(function(){document.body.style.overflowY = "visible"}, 9000)
     setTimeout(function(){document.getElementById('scrolldown').style.opacity = 1;}, 9000)
     whalerun = 1;
   }
   if(document.documentElement.scrollTop > windowHeight/.52962963 && turtlerun ===0){
     // for the turtle animation and thought bubble pop up
-    document.body.style.overflowY = "visible";
+    document.body.style.overflowY = "hidden";
 
     document.getElementById('turtle').className = "turtleanimation";
     document.getElementById('turtlethoughtbubble').className = "turtlethoughtbubbleanimation";
@@ -113,7 +113,7 @@ function myFunction() {
 
 
   if(document.documentElement.scrollTop > windowHeight/.84117647 && bagsrun === 0){
-    document.body.style.overflowY = "visible";
+    document.body.style.overflowY = "hidden";
     document.getElementById('youngbag').className = "youngbaganimation";
     document.getElementById('oldbag').className = "oldbaganimation";
     setTimeout(function(){document.getElementById('youngbagthoughtbubble').style.opacity = 1}, 5000);
@@ -165,7 +165,7 @@ function myFunction() {
   }
   if(document.documentElement.scrollTop > windowHeight/1.89655172){
     // show anchor
-    document.body.style.overflowX = "visible";
+    // document.body.style.overflowX = "visible";
     document.getElementById('wave').play();
     document.getElementById('depthmeter').style.opacity = 1;
     document.getElementById('rope').style.opacity = 1;
@@ -178,7 +178,7 @@ function myFunction() {
   if(document.documentElement.scrollTop > windowHeight/1.89655172 && dolphinrun === 0){
     console.log("HEY");
     // for the dolphin animation and thought bubble pop up
-    document.body.style.overflowY = "visible";
+    document.body.style.overflowY = "hidden";
     document.getElementById('narratorshrimpspeechbubble').style.opacity = 1;
     document.getElementById('narratorshrimpwords').style.opacity = 1;
     document.getElementById('narratorshrimp').style.opacity = 1;
