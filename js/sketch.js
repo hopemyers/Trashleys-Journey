@@ -3,13 +3,13 @@ const yaxis = 1;
 let yoff = 0.0;
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth*2, windowHeight*4.1958042);
   background(150);
 }
 
 function setup() {
   // put setup code here
-  canvas = createCanvas(2880, 3000);
+  canvas = createCanvas(windowWidth*2, windowHeight*4.1958042);
   canvas.position(0,0);
   canvas.style('z-index','-1')
   background(255,255,255);
@@ -375,6 +375,17 @@ strokeWeight(1);
 // vertex(width/3.03, height/7.55);
 // endShape();
 
+beginShape();
+fill(166, 220, 255);
+stroke(166, 220, 255);
+strokeWeight(1);
+vertex(windowWidth*0, windowHeight*0);
+vertex(windowWidth*2, windowHeight*0);
+vertex(windowWidth*2, windowHeight/1.80100756);
+vertex(windowWidth*0, windowHeight/1.80100756);
+vertex(windowWidth*0, windowHeight*0);
+endShape();
+
 // perlin noise fluxuating waves
 beginShape();
 fill(87,233,255);
@@ -408,51 +419,51 @@ setGradient(950, 397, 2880-950, 3000-397, c2, c1, yaxis);
 // ocean shape
 beginShape();
 fill(75,40,0);
-stroke(75,40,0)
+stroke(75,40,0);
 strokeWeight(1);
-curveVertex(949, 397);
-curveVertex(949, 397);
-curveVertex(970, 410);
-curveVertex(1010, 420);
-curveVertex(1050, 425);
-curveVertex(1090, 460);
-curveVertex(1110, 500);
-curveVertex(1130, 540);
-curveVertex(1180, 560);
-curveVertex(1230, 570);
-curveVertex(1280, 580);
-curveVertex(1350, 600);
-curveVertex(1400, 630);
-curveVertex(1440, 700);
-curveVertex(1460, 800);
-curveVertex(1480, 1200);
-curveVertex(1500, 1600);
-curveVertex(1520, 2000);
-curveVertex(1540, 2400);
-curveVertex(1560, 2600);
-curveVertex(1580, 2700);
-curveVertex(1630, 2750);
-curveVertex(1680, 2800);
-curveVertex(1800, 2850);
-curveVertex(1950, 2880);
-curveVertex(2100, 2870);
-curveVertex(2200, 2850);
-curveVertex(2250, 2840);
-curveVertex(2350, 2850);
-curveVertex(2450, 2880);
-curveVertex(2530, 2940);
-curveVertex(2630, 2960);
-curveVertex(2630, 2960);
-curveVertex(2730, 2950);
-curveVertex(2830, 2920);
-vertex(2880, 2900);
-vertex(3000, 2900);
-vertex(2880, 3000);
-vertex(0, 3000);
-vertex(0, 397);
-vertex(949, 397);
+curveVertex(windowWidth/1.51738672, windowHeight/1.80100756);
+curveVertex(windowWidth/1.51738672, windowHeight/1.80100756);
+curveVertex(windowWidth/1.48453608, windowHeight/1.74390244);
+curveVertex(windowWidth/1.42574257, windowHeight/1.70238095);
+curveVertex(windowWidth/1.37142857, windowHeight/1.68235294);
+curveVertex(windowWidth/1.32110092, windowHeight/1.55434783);
+curveVertex(windowWidth/1.2972973, windowHeight/1.43);
+curveVertex(windowWidth/1.27433628, windowHeight/1.32407407);
+curveVertex(windowWidth/1.22033898, windowHeight/1.27678571);
+curveVertex(windowWidth/1.17073171, windowHeight/1.25438596);
+curveVertex(windowWidth/1.125, windowHeight/1.23275862);
+curveVertex(windowWidth/1.06666667, windowHeight/1.19166667);
+curveVertex(windowWidth/1.02857143, windowHeight/1.13492063);
+curveVertex(windowWidth, windowHeight/1.02142857);
+curveVertex(windowWidth/.98630137, windowHeight/.89375);
+curveVertex(windowWidth/.97297297, windowHeight/.59583333);
+curveVertex(windowWidth/.96, windowHeight/.446875);
+curveVertex(windowWidth/.94736842, windowHeight/.3575);
+curveVertex(windowWidth/.93506494, windowHeight/.29791667);
+curveVertex(windowWidth/.92307692, windowHeight/.275);
+curveVertex(windowWidth/.91139241, windowHeight/.26481481);
+curveVertex(windowWidth/.88343558, windowHeight/.26);
+curveVertex(windowWidth/.85714286, windowHeight/.25535714);
+curveVertex(windowWidth/.8, windowHeight/.25087719);
+curveVertex(windowWidth/.73846154, windowHeight/.24826389);
+curveVertex(windowWidth/.68571429, windowHeight/.24912892);
+curveVertex(windowWidth/.65454545, windowHeight/.25087719);
+curveVertex(windowWidth/.64, windowHeight/.25176056);
+curveVertex(windowWidth/.61276596, windowHeight/.25087719);
+curveVertex(windowWidth/.5877331, windowHeight/.24826389);
+curveVertex(windowWidth/.56916996, windowHeight/.24319728);
+curveVertex(windowWidth/.54752852, windowHeight/.24155405);
+curveVertex(windowWidth/.52747253, windowHeight/.24237288);
+curveVertex(windowWidth/.50883392, windowHeight/.24486301);
+vertex(windowWidth/.5, windowHeight/.24655172);
+vertex(windowWidth/.48, windowHeight/.24655172);
+vertex(windowWidth/.5, windowHeight/.23833333);
+vertex(windowWidth*0, windowHeight/.23833333);
+vertex(windowWidth*0, windowHeight/1.80100756);
+vertex(windowWidth/1.51738672, windowHeight/1.80100756);
 // vertex(950, 397);
 endShape();
+
 
 
 // messages that pop up with the bubbles

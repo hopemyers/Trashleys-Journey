@@ -3,11 +3,11 @@ window.onscroll = function() {myFunction()};
 function scrollright(scrollDuration) {
   document.getElementById('bgm').play();
   document.getElementById('bag').className = "baganimation";
-  document.getElementById('floatingbag').className = "floatingbagopacityanimation";
+    setTimeout(function(){document.getElementById('floatingbag').style.opacity = 1}, 7000);
   document.getElementById('floatingbagmovement').className = "floatingbaganimation";
   document.getElementById('rightarrow').style.opacity = 0;
-  console.log(document.getElementById('floatingbag').className);
-  console.log(scrollDuration);
+  // console.log(document.getElementById('floatingbag').className);
+  // console.log(scrollDuration);
   // document.getElementById('birdthoughtbubble').style.opacity = 1;
   document.getElementById('birdthoughtbubble').className = "birdthoughtbubbleanimation";
   document.getElementById('seagull').className = "seagullanimation";
@@ -51,15 +51,18 @@ let eggsfound = 0;
 let remindrun = 0;
 let foundrun = 0;
 
+let windowWidth = window.innerWidth;
+let windowHieght = window.innerHeight;
+
 function myFunction() {
-  document.getElementById('depthmeter').innerHTML = "Depth: " + (document.documentElement.scrollTop - 377) + "m";
+  document.getElementById('depthmeter').innerHTML = "Depth: " + (document.documentElement.scrollTop - windowHeight/2 -10) + "m";
   document.getElementById('scrolldown').style.opacity = 0;
 
-  if (document.documentElement.scrollLeft > 1438){
+  if (document.documentElement.scrollLeft > windowWidth){
     document.body.style.overflowX = "visible";
   }
 
-  if(document.documentElement.scrollTop > 2280 && eggsfound < 6 && remindrun === 0){
+  if(document.documentElement.scrollTop > windowHeight/.31359649 && eggsfound < 6 && remindrun === 0){
     console.log("find all the eggs!");
     document.getElementById('remindershrimp').style.opacity = 1;
     document.getElementById('remindershrimpwords').style.opacity = 1;
@@ -70,13 +73,13 @@ function myFunction() {
     remindrun = 1;
   }
 
-  if(document.documentElement.scrollTop > 1800 && whalerun === 0) {
+  if(document.documentElement.scrollTop > windowHeight/.39722222 && whalerun === 0) {
     document.body.style.overflowY = "visible";
     setTimeout(function(){document.body.style.overflowY = "visible"}, 9000)
     setTimeout(function(){document.getElementById('scrolldown').style.opacity = 1;}, 9000)
     whalerun = 1;
   }
-  if(document.documentElement.scrollTop > 1350 && turtlerun ===0){
+  if(document.documentElement.scrollTop > windowHeight/.52962963 && turtlerun ===0){
     // for the turtle animation and thought bubble pop up
     document.body.style.overflowY = "visible";
 
@@ -109,7 +112,7 @@ function myFunction() {
   }
 
 
-  if(document.documentElement.scrollTop > 850 && bagsrun === 0){
+  if(document.documentElement.scrollTop > windowHeight/.84117647 && bagsrun === 0){
     document.body.style.overflowY = "visible";
     document.getElementById('youngbag').className = "youngbaganimation";
     document.getElementById('oldbag').className = "oldbaganimation";
@@ -160,7 +163,7 @@ function myFunction() {
     setTimeout(function(){document.getElementById('scrolldown').style.opacity = 1;}, 68000);
     bagsrun = 1;
   }
-  if(document.documentElement.scrollTop > 377){
+  if(document.documentElement.scrollTop > windowHeight/1.89655172){
     // show anchor
     document.body.style.overflowX = "visible";
     document.getElementById('wave').play();
@@ -172,7 +175,7 @@ function myFunction() {
     // console.log(document.documentElement.scrollTop);
 
   }
-  if(document.documentElement.scrollTop > 377 && dolphinrun === 0){
+  if(document.documentElement.scrollTop > windowHeight/1.89655172 && dolphinrun === 0){
     console.log("HEY");
     // for the dolphin animation and thought bubble pop up
     document.body.style.overflowY = "visible";
@@ -212,7 +215,7 @@ function myFunction() {
     dolphinrun = 1;
 
   }
-  if(document.documentElement.scrollTop < 377){
+  if(document.documentElement.scrollTop < windowHeight/1.89655172){
     // hide anchor above water
     document.getElementById('depthmeter').style.opacity = 0;
     document.getElementById('rope').style.opacity = 0;
